@@ -1,11 +1,258 @@
-/* Add your CSS to this file */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    line-height: 1.6;
+    color: #1a202c;
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: white;
+    font-size: 18px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+header nav a {
+    color: #6b7280;
+}
+
+header nav a:hover {
+    color: #5A67D8;
+}
+
+.overview-hero {
+    background-color: #E2E8F0;
+}
+
+.overview-hero .container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.overview-hero-image {
+    flex: 1;
+}
+
+.overview-hero-text {
+    flex: 1;
+}
+
+.learn-about .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.learn-about h2 {
+    font-size: 24px;
+    color: #48BB78;
+}
+
+.learn-about .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.learn-about .card {
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+}
+
+.learn-about .card h3 {
+    color: #48BB78;
+    font-size: 21px;
+}
+
+.learn-about .card img {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.testing {
+    background-color: #4A5568;
+    color: white;
+}
+
+.testing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.testing-desciption {
+    flex: 1;
+}
+
+.testing .btn {
+    background-color: #48BB78;
+    color: white;
+    border-radius: 5px;
+    padding: 12px 28px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.stories .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.stories h2 {
+    color: #5A67D8;
+}
+
+.stories article {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.stories article img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.stories article h3 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.stories article a {
+    color: #5A67D8;
+}
+
+.newsletter {
+    background-color: #48BB78;
+    color: white;
+    text-align: center;
+}
+
+.newsletter .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.newsletter h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 12px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.newsletter .btn {
+    background-color: #5A67D8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.newsletter .message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #4A5568;
+    color: white;
+    text-align: center;
+}
+
+footer .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .overview-hero .container,
+    .testing .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .learn-about .cards {
+        grid-template-columns: 1fr;
+    }
+    .stories article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .newsletter input[type="email"] {
+        width: 100%;
+        max-width: 320px;
+    }
 }
